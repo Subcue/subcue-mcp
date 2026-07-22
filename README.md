@@ -70,6 +70,14 @@ claude mcp add --transport http subcue https://subcue.ai/mcp
 
 **claude.ai** — Settings → Connectors → Add custom connector → `https://subcue.ai/mcp`.
 
+**Stdio-only clients** — this repo ships a zero-dependency stdio ⇄ HTTP bridge ([`bridge/server.mjs`](bridge/server.mjs), Node 18+):
+
+```sh
+claude mcp add subcue -- node /path/to/subcue-mcp/bridge/server.mjs
+# or containerised:
+docker build -t subcue-mcp . && docker run -i subcue-mcp
+```
+
 ## Examples in this repo
 
 - [`examples/list-tools.sh`](examples/list-tools.sh) — curl walkthrough of every method
