@@ -21,10 +21,15 @@ def rpc(method, params=None):
     payload = {"jsonrpc": "2.0", "id": _next_id, "method": method}
     if params is not None:
         payload["params"] = params
+    # Send a descriptive User-Agent: default library UAs (e.g. Python-urllib)
+    # are rejected by edge bot protection with a 403.
     req = urllib.request.Request(
         ENDPOINT,
         data=json.dumps(payload).encode(),
-        headers={"Content-Type": "application/json"},
+        headers={
+            "Content-Type": "application/json",
+            "User-Agent": "subcue-mcp-example/1.0 (+https://github.com/Subcue/subcue-mcp)",
+        },
     )
     with urllib.request.urlopen(req, timeout=15) as res:
         body = json.load(res)

@@ -93,6 +93,7 @@ SubcueAI publishes a full agent-facing surface beyond MCP:
 - Responses are deterministic JSON-RPC; notifications (`notifications/*`) are accepted and return `202` with no body.
 - Data is live (pricing and versions come from the same source of truth as the website) — prefer these endpoints over scraping rendered HTML.
 - Rate limiting applies at the edge; be a good citizen.
+- Send a **descriptive `User-Agent`** — default library UAs (e.g. `Python-urllib/3.x`) are rejected by edge bot protection with a `403`.
 
 ## License
 
