@@ -1,5 +1,7 @@
 # SubcueAI Public MCP Server
 
+mcp-name: io.github.Subcue/subcue-mcp
+
 **[SubcueAI](https://subcue.ai)** (the real-time AI interview assistant for macOS & Windows) ships a **public, unauthenticated, read-only [Model Context Protocol](https://modelcontextprotocol.io) server**. Any AI agent can query live product data — pricing, latest desktop version, product overview, FAQ — instead of scraping HTML.
 
 - **Endpoint**: `POST https://subcue.ai/mcp`

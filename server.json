@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Subcue/subcue-mcp",
+  "title": "SubcueAI",
+  "description": "Public read-only MCP for SubcueAI: live pricing, latest desktop version, overview and FAQ.",
+  "version": "1.0.0",
+  "websiteUrl": "https://subcue.ai",
+  "repository": {
+    "url": "https://github.com/Subcue/subcue-mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://subcue.ai/mcp"
+    }
+  ]
+}
